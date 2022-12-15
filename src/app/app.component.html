@@ -1,0 +1,37 @@
+<div>
+  <input
+    type="checkbox"
+    (change)="onChange($event)"
+    id="red"
+    name="red"
+    value="red"
+    [(ngModel)]="isRedChecked"
+  />
+  <label for="red">RED</label>
+
+  <input
+    type="checkbox"
+    (change)="onChange($event)"
+    id="green"
+    name="green"
+    value="green"
+    [(ngModel)]="isGreenChecked"
+  />
+  <label for="green">Green</label>
+
+  <input
+    type="checkbox"
+    (change)="onChange($event)"
+    id="amber"
+    name="amber"
+    value="amber"
+    [(ngModel)]="isAmberChecked"
+  />
+  <label for="amber">amber</label>
+</div>
+
+<div *ngFor="let data of resultArr; let i = index">
+  <span>Exchange Code :- {{ data.exchangeCode }}</span>
+  <span>RAG Status :- {{ data.ragStatus }}</span>
+  <hr />
+</div>
